@@ -16,7 +16,7 @@ jobs:
         with:
           submodules: recursive
       - name: Checkout crepuscularity
-        run: git clone --depth 1 https://github.com/tschk/crepuscularity.git ../crepuscularity
+        run: git clone --depth 1 https://github.com/softwarecorporation/crepuscularity.git ../crepuscularity
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: stable

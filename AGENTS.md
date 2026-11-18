@@ -50,7 +50,7 @@ ipc/             → ipc-channel messages
 
 - No sync envelopes, device trust, or 2FA flows.
 - Product shells live in the Roverite apps; engine behavior and polyfills belong here in `rv8`.
-- Never push to upstream `servo/servo`; use the `tschk/servo` fork for RV8 Servo work.
+- Never push to upstream `servo/servo`; use the `softwarecorporation/servo` fork for RV8 Servo work.
 
 ## Code style
 

@@ -6,7 +6,7 @@ description = "rv8, a modern browser engine with Servo rendering and V8 JavaScri
 license-file = "LICENSE"
 rust-version = "1.75.0"
 authors = ["Max Carter <max@undivisible.dev>"]
-repository = "https://github.com/tschk/rv8"
+repository = "https://github.com/softwarecorporation/rv8"
 keywords = ["browser", "servo", "v8", "webengine", "rendering"]
 categories = ["web-programming", "rendering", "gui"]
 

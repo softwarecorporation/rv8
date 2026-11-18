@@ -1,4 +1,4 @@
 [submodule "third_party/servo"]
 	path = third_party/servo
-	url = https://github.com/tschk/servo.git
+	url = https://github.com/softwarecorporation/servo.git
 	branch = rv8
