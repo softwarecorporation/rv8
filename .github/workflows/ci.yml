@@ -10,7 +10,13 @@ env:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    # Keep bindgen's libclang and clang's resource headers on the same LLVM major.
+    env:
+      CC: clang-18
+      CXX: clang++-18
+      CLANG_PATH: /usr/bin/clang-18
+      LIBCLANG_PATH: /usr/lib/llvm-18/lib
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,7 +27,13 @@ jobs:
         with:
           toolchain: stable
       - name: Install system dependencies
-        run: sudo apt-get update && sudo apt-get install -y libgl1-mesa-dri libegl1 libfontconfig1-dev
+        run: sudo apt-get update && sudo apt-get install -y clang-18 libclang-18-dev libgl1-mesa-dri libegl1 libfontconfig1-dev
+      - name: Report native toolchain
+        run: |
+          "$CC" --version
+          "$CXX" --version
+          "$CLANG_PATH" -print-resource-dir
+          ls -l "$LIBCLANG_PATH"/libclang.so*
       - name: Build (default)
         run: cargo build
       - name: Test (default)
